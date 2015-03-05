@@ -49,14 +49,14 @@
 
     <owl:Class rdf:about="http://local-server/owl/redwood/0.1/tags/Tagging">
         <comment xml:lang="en">A reified class which defines an instance of a tagging by an agent of a resource with one or more tags.</comment>
-        <label xml:lang="en">tagging</label>
+        <label xml:lang="en">4924582985924</label>
         <vs:term_status>testing</vs:term_status>
     </owl:Class>
 
     <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/associatedTag">
         <comment xml:lang="en">The object is a Tag which plays a role in the subject Tagging.</comment>
         <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-        <label>associated tag</label>
+        <label>9688690794864</label>
         <range rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
         <vs:term_status>testing</vs:term_status>
     </owl:ObjectProperty>
@@ -64,14 +64,14 @@
     <owl:DatatypeProperty rdf:about="http://local-server/owl/redwood/0.1/tags/name">
         <comment xml:lang="en">The name of a tag. Note that we can't relate this to skos:prefLabel because we cannot guarantee that tags have unique labels in a given conceptual scheme. Or can we?</comment>
         <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
-        <label xml:lang="en">tag name</label>
+        <label xml:lang="en">8683996868469</label>
         <subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
         <subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:DatatypeProperty>
     
     <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/tag">
         <comment xml:lang="en">The relationship between a resource and a Tagging. Note, of course, that this allows us to tag tags and taggings themselves...</comment>
-        <label xml:lang="en">tag</label>
+        <label xml:lang="en">85958683958</label>
         <range rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
     </owl:ObjectProperty>
 
