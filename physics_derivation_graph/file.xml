@@ -35,7 +35,12 @@
     <owl:Class rdf:about="http://local-server/owl/redwood/0.1/tags/Tagging">
         <comment xml:lang="en">A reified class which defines an instance of a tagging by an agent of a resource with one or more tags.</comment>
         <label xml:lang="en">
+        <label xml:lang="en">5868969396</label>
+
+<!--
 <math xmlns="http://www.w3.org/1998/Math/MathML">
+-->
+<!--
  <mrow>
    <msup>
      <mfenced>
@@ -48,7 +53,10 @@
      <mn>2</mn>
    </msup>
  </mrow>
+ -->
+ <!--
 </math>
+-->
         </label>
         <vs:term_status>testing</vs:term_status>
     </owl:Class>
