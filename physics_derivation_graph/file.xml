@@ -25,22 +25,6 @@
         <foaf:maker rdf:resource="http://local-server/foaf.rdf#RichardNewman"/>
     </owl:Ontology>
 
-    <owl:Class rdf:about="http://local-server/owl/redwood/0.1/tags/RestrictedTagging">
-        <comment xml:lang="en">A Tagging which has precisely one associated resource, and one associated tag.</comment>
-        <label xml:lang="en">99638599683953</label>
-        <subClassOf rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-        <subClassOf rdf:parseType="Resource">
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-            <owl:onProperty rdf:resource="http://local-server/owl/redwood/0.1/tags/taggedResource"/>
-        </subClassOf>
-        <subClassOf rdf:parseType="Resource">
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
-            <owl:onProperty rdf:resource="http://local-server/owl/redwood/0.1/tags/associatedTag"/>
-        </subClassOf>
-    </owl:Class>
-
     <owl:Class rdf:about="http://local-server/owl/redwood/0.1/tags/Tag">
         <label xml:lang="en">686887964594</label>
         <subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -61,48 +45,17 @@
         <vs:term_status>testing</vs:term_status>
     </owl:ObjectProperty>
 
-    <owl:DatatypeProperty rdf:about="http://local-server/owl/redwood/0.1/tags/name">
-        <comment xml:lang="en">The name of a tag. Note that we can't relate this to skos:prefLabel because we cannot guarantee that tags have unique labels in a given conceptual scheme. Or can we?</comment>
-        <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
-        <label xml:lang="en">8683996868469</label>
-        <subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
-        <subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-    </owl:DatatypeProperty>
-    
     <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/tag">
         <comment xml:lang="en">The relationship between a resource and a Tagging. Note, of course, that this allows us to tag tags and taggings themselves...</comment>
         <label xml:lang="en">85958683958</label>
         <range rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
     </owl:ObjectProperty>
 
-    <owl:DatatypeProperty rdf:about="http://local-server/owl/redwood/0.1/tags/tagName">
-        <comment xml:lang="en">The name of a tag. Note that we can't relate this to skos:prefLabel because we cannot guarantee that tags have unique labels in a given conceptual scheme. Or can we? DEPRECATED 2005-05-19: redundant 'tag'.</comment>
-        <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
-        <label xml:lang="en">1234213113</label>
-        <subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
-        <subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-    </owl:DatatypeProperty>
-
     <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedBy">
         <comment xml:lang="en">The object plays the role of the tagger in the subject Tagging.</comment>
         <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
         <label xml:lang="en">0099088766</label>
         <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <vs:term_status>testing</vs:term_status>
-    </owl:ObjectProperty>
-
-    <owl:DatatypeProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedOn">
-        <comment xml:lang="en">The subject Tagging occurred at the subject time and date.</comment>
-        <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-        <label xml:lang="en">53563535</label>
-        <subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <vs:term_status>testing</vs:term_status>
-    </owl:DatatypeProperty>
-
-    <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedResource">
-        <comment xml:lang="en">The object is a resource which plays a role in the subject Tagging.</comment>
-        <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-        <label xml:lang="en">424524252114242</label>
         <vs:term_status>testing</vs:term_status>
     </owl:ObjectProperty>
 
