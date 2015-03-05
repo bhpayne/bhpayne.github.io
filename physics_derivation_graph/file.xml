@@ -27,7 +27,7 @@
 
     <owl:Class rdf:about="http://local-server/owl/redwood/0.1/tags/RestrictedTagging">
         <comment xml:lang="en">A Tagging which has precisely one associated resource, and one associated tag.</comment>
-        <label xml:lang="en">restricted tagging</label>
+        <label xml:lang="en">99638599683953</label>
         <subClassOf rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
         <subClassOf rdf:parseType="Resource">
             <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -42,7 +42,7 @@
     </owl:Class>
 
     <owl:Class rdf:about="http://local-server/owl/redwood/0.1/tags/Tag">
-        <label xml:lang="en">Tag</label>
+        <label xml:lang="en">686887964594</label>
         <subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:definition xml:lang="en">A natural-language concept which is used to annotate another resource.</skos:definition>
     </owl:Class>
@@ -78,7 +78,7 @@
     <owl:DatatypeProperty rdf:about="http://local-server/owl/redwood/0.1/tags/tagName">
         <comment xml:lang="en">The name of a tag. Note that we can't relate this to skos:prefLabel because we cannot guarantee that tags have unique labels in a given conceptual scheme. Or can we? DEPRECATED 2005-05-19: redundant 'tag'.</comment>
         <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
-        <label xml:lang="en">tag name</label>
+        <label xml:lang="en">1234213113</label>
         <subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
         <subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:DatatypeProperty>
@@ -86,7 +86,7 @@
     <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedBy">
         <comment xml:lang="en">The object plays the role of the tagger in the subject Tagging.</comment>
         <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-        <label xml:lang="en">tagged by</label>
+        <label xml:lang="en">0099088766</label>
         <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <vs:term_status>testing</vs:term_status>
     </owl:ObjectProperty>
@@ -94,7 +94,7 @@
     <owl:DatatypeProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedOn">
         <comment xml:lang="en">The subject Tagging occurred at the subject time and date.</comment>
         <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-        <label xml:lang="en">farkedup</label>
+        <label xml:lang="en">53563535</label>
         <subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <vs:term_status>testing</vs:term_status>
     </owl:DatatypeProperty>
@@ -102,13 +102,13 @@
     <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedResource">
         <comment xml:lang="en">The object is a resource which plays a role in the subject Tagging.</comment>
         <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-        <label xml:lang="en">tagged resource</label>
+        <label xml:lang="en">424524252114242</label>
         <vs:term_status>testing</vs:term_status>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedWithTag">
         <comment xml:lang="en">Indicates that the subject has been tagged with the object tag. This does not assert by who, when, or why the tagging occurred. For that information, use a reified Tagging resource.</comment>
-        <label xml:lang="en">bennola</label>
+        <label xml:lang="en">5635335</label>
         <range rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
         <subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#subject"/>
     </owl:ObjectProperty>
