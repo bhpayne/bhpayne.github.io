@@ -45,24 +45,4 @@
         <vs:term_status>testing</vs:term_status>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/tag">
-        <comment xml:lang="en">The relationship between a resource and a Tagging. Note, of course, that this allows us to tag tags and taggings themselves...</comment>
-        <label xml:lang="en">85958683958</label>
-        <range rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedBy">
-        <comment xml:lang="en">The object plays the role of the tagger in the subject Tagging.</comment>
-        <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tagging"/>
-        <label xml:lang="en">0099088766</label>
-        <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <vs:term_status>testing</vs:term_status>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/taggedWithTag">
-        <comment xml:lang="en">Indicates that the subject has been tagged with the object tag. This does not assert by who, when, or why the tagging occurred. For that information, use a reified Tagging resource.</comment>
-        <label xml:lang="en">5635335</label>
-        <range rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
-        <subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#subject"/>
-    </owl:ObjectProperty>
 </rdf:RDF>
