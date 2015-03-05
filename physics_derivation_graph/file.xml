@@ -68,16 +68,7 @@
         <subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
         <subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:DatatypeProperty>
-
-    <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/relatedTag">
-        <comment xml:lang="en">The two tags are asserted as being related. This might be symmetric, but it certainly isn't transitive.</comment>
-        <domain rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
-        <label xml:lang="en">related tag</label>
-        <range rdf:resource="http://local-server/owl/redwood/0.1/tags/Tag"/>
-        <subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
-        <vs:term_status>testing</vs:term_status>
-    </owl:ObjectProperty>
-
+    
     <owl:ObjectProperty rdf:about="http://local-server/owl/redwood/0.1/tags/tag">
         <comment xml:lang="en">The relationship between a resource and a Tagging. Note, of course, that this allows us to tag tags and taggings themselves...</comment>
         <label xml:lang="en">tag</label>
