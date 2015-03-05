@@ -2,5 +2,20 @@
 from http://vowl.visualdataweb.org/webvowl.html
 
 
+The WebVOWL visualizations are created from a JSON file. Here's a template: http://vowl.visualdataweb.org/webvowl/js/data/template.json
+It is NOT a one-to-one representation of the ontology file (OWL, RDF, TTL), but is optimized w.r.t. VOWL.
+However, the JSON can be created from an ontology file. We developed the OWL2VOWL converter for this purpose: http://vowl.visualdataweb.org/webvowl.html#installationOWL2VOWL
+
+
 http://vowl.visualdataweb.org/webvowl.html#installationOWL2VOWL
+
+The OWL2VOWL converter requires at least Java 6 to be installed on your machine. Execute the JAR file with the following command (where 'Ontology IRI' is the IRI of the ontology you would like to convert into the VOWL-JSON format):
+
+java -jar owl2vowl.jar -iri "[Ontology IRI]"
+
+For instance, the following command converts the FOAF vocabulary into the JSON file required for WebVOWL:
+
+java -jar owl2vowl.jar -iri "http://xmlns.com/foaf/spec/"
+
+The converter is based on the OWL API, which can handle different OWL formats (RDF/XML, OWL/XML, Turtle, etc.). It requires at least Java 6 and comes with a README file that lists further conversion modes.
 
