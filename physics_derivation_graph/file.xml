@@ -14,22 +14,21 @@
     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">
 
     <owl:Ontology rdf:about="http://local-server/owl/redwood/0.1/tags/">
-        <dc:contributor>Danny Ayers</dc:contributor>
-        <dc:contributor>Seth Russell</dc:contributor>
+        <dc:contributor>Batman</dc:contributor>
         <dc:creator>Ben Payne</dc:creator>
         <dc:creator>Mike Goff</dc:creator>
-        <dc:description xml:lang="en">An ontology that describes tags, as used in the popular del.icio.us and Flickr systems, and allows for relationships between tags to be described.</dc:description>
+        <dc:description xml:lang="en">An ontology that describes mathematical physics</dc:description>
         <dc:title xml:lang="en">Tag ontology</dc:title>
         <dct:issued>2005-03-23</dct:issued>
         <dct:modified>2005-12-21</dct:modified>
-        <label xml:lang="en">An ontology for tags.</label>
+        <label xml:lang="en">9693593</label>
         <foaf:maker rdf:resource="http://local-server/foaf.rdf#RichardNewman"/>
     </owl:Ontology>
 
     <owl:Class rdf:about="http://local-server/owl/redwood/0.1/tags/Tag">
         <label xml:lang="en">686887964594</label>
         <subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition xml:lang="en">A natural-language concept which is used to annotate another resource.</skos:definition>
+        <skos:definition xml:lang="en">blah blah</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="http://local-server/owl/redwood/0.1/tags/Tagging">
