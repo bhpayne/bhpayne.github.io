@@ -1,0 +1,59 @@
+<!-- http://thinkingonthinking.com/Getting-Started-With-D3/ -->
+<!DOCTYPE html>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var vis = d3.select("body")
+            .append("svg");
+
+var w = 900,
+    h = 400;
+
+vis.attr("width", w)
+   .attr("height", h);
+
+vis.text("Our Graph")
+   .select("#graph")
+
+// node locations
+var nodes = [{x: 30, y: 50},
+             {x: 50, y: 80},
+             {x: 90, y: 120}]
+
+///*
+// place circles
+vis.selectAll("circle.nodes")
+     .data(nodes)
+     .enter()
+     .append("svg:circle")
+     .attr("cx", function(d) { return d.x; })
+     .attr("cy", function(d) { return d.y; })
+// to actually see the circles, we must set the fill attribute:
+      .attr("r", "10px")
+      .attr("fill", "black") 
+//*/
+
+var links = [
+    {source: nodes[0], y: nodes[1]}
+  ]
+
+vis.selectAll(".line")
+   .data(links)
+   .enter()
+   .append("line")
+    .attr("x1", 40)
+    .attr("y1", 50)
+    .attr("x2", 450)
+    .attr("y2", 150)
+    .style("stroke", "rgb(6,120,155)");
+/*
+   .attr("class", "link")
+   .attr("stroke", "#CCC")
+   .attr("fill", "black");
+//*/
+
+</script>
+<P>Hello</P>
+</body>
+</html>
