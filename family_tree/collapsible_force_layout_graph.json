@@ -1,22 +1,22 @@
 {
- "name": "flare",
+ "name": "grand parent",
  "children": [
   {
-   "name": "analytics",
+   "name": "father",
    "children": [
     {
-     "name": "cluster",
+     "name": "kid",
      "children": [
-      {"name": "AgglomerativeCluster", "size": 3938},
-      {"name": "CommunityStructure", "size": 3812},
-      {"name": "HierarchicalCluster", "size": 6714},
-      {"name": "MergeEdge", "size": 743}
+      {"name": "grand kid", "size": 3938},
+      {"name": "another grand kid", "size": 3812},
+      {"name": "yet another grand kid", "size": 6714},
+      {"name": "more", "size": 743}
      ]
     },
     {
-     "name": "graph",
+     "name": "kid 2",
      "children": [
-      {"name": "BetweennessCentrality", "size": 3534},
+      {"name": "more grand kids", "size": 3534},
       {"name": "LinkDistance", "size": 5731},
       {"name": "MaxFlowMinCut", "size": 7840},
       {"name": "ShortestPaths", "size": 5914},
