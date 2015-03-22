@@ -35,18 +35,19 @@ vis.selectAll("circle.nodes")
 //*/
 
 var links = [
-    {source: nodes[0], y: nodes[1]}
-  ]
+  {source: nodes[0], target: nodes[1]},
+  {source: nodes[2], target: nodes[1]}
+]
 
 vis.selectAll(".line")
    .data(links)
    .enter()
    .append("line")
-    .attr("x1", 40)
-    .attr("y1", 50)
-    .attr("x2", 450)
-    .attr("y2", 150)
-    .style("stroke", "rgb(6,120,155)");
+   .attr("x1", function(d) { return d.source.x })
+   .attr("y1", function(d) { return d.source.y })
+   .attr("x2", function(d) { return d.target.x })
+   .attr("y2", function(d) { return d.target.y })
+   .style("stroke", "rgb(6,120,155)");
 
 
 </script>
