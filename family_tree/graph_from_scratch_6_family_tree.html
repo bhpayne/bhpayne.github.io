@@ -28,7 +28,7 @@ text {
 <script>
 
 // get the data
-d3.csv("http://bhpayne.github.io/family_tree/names.csv", function(error, links) {
+d3.csv("http://bhpayne.github.io/family_tree/famtree.csv", function(error, links) {
 
 var nodes = {};
 
@@ -38,7 +38,7 @@ links.forEach(function(link) {
         (nodes[link.source] = {name: link.source});
     link.target = nodes[link.target] || 
         (nodes[link.target] = {name: link.target});
-    link.value = +link.value;
+//    link.value = +link.value;
 });
 
 var width = 960,
