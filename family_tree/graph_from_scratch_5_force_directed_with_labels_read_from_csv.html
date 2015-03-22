@@ -36,18 +36,20 @@ var palette = {
       "yellowgreen": "#738A05"
   }
 
-var nodes;
-var nodes = d3.csv.parse("node_labels.csv")
+//var nodes;
+//var nodes = d3.csv.parse("node_labels.csv")
 
 /*
 var nodes = []
-d3.csv("node_labels.csv", function(data) {
+d3.csv("http://bhpayne.github.io/family_tree/node_labels.csv", function(data) {
    nodes = data.map(function(d) { return [ +d["name"] ]; });
    console.log(nodes)
+   console.log(nodes[0])
 });
+
 //*/
 
-/*
+///*
 var nodes = [
                 {"name": "Matteo" },
                     {"name": "Daniele"},
@@ -72,6 +74,8 @@ var vis = d3.select("body")
       .attr("class", "stage")
       .attr("width", w)
       .attr("height", h);
+
+
 
 var force = d3.layout.force()
     .nodes(nodes)
