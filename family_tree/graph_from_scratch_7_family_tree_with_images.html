@@ -93,9 +93,17 @@ var node = svg.selectAll(".node")
     .attr("class", "node")
     .call(force.drag);
 
+/*
 // add the nodes
 node.append("circle")
     .attr("r", 5);
+//*/
+  node.append("image")
+      .attr("xlink:href", "https://github.com/favicon.ico")
+      .attr("x", -8)
+      .attr("y", -8)
+      .attr("width", 16)
+      .attr("height", 16);
 
 // add the text 
 node.append("text")

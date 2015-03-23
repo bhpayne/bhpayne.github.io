@@ -10,7 +10,7 @@
 }
 
 .node text {
-  font: 10px sans-serif;
+  font: 12px sans-serif;
   pointer-events: none;
   text-anchor: middle;
 }
@@ -23,7 +23,9 @@ line.link {
 
 </style>
 <body>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+<script src="../d3/d3.v3.min.js"></script> -->
+
 <script>
 
 var width = 960,
@@ -44,7 +46,7 @@ var svg = d3.select("body").append("svg")
 var link = svg.selectAll(".link"),
     node = svg.selectAll(".node");
 
-d3.json("collapsible_force_layout_graph.json", function(error, json) {
+d3.json("http://bhpayne.github.io/family_tree/collapsible_force_layout_graph.json", function(error, json) {
   root = json;
   update();
 });
@@ -133,3 +135,5 @@ function flatten(root) {
 </script>
 
 <P>Hello</P>
+</body>
+</html>
