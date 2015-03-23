@@ -99,11 +99,12 @@ node.append("text")
     .attr("dy", ".35em")
 //    .text(function(d) { return d.name; });
     .text(function(d) { if (isNumber(d.name)) {
-                             return "hkw";
+                             return "with";
                          } else {
                              return d.name;
                          } });
 
+// http://stackoverflow.com/questions/18082/validate-decimal-numbers-in-javascript-isnumeric
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
@@ -117,6 +118,7 @@ function tick() {
             dr = Math.sqrt(dx * dx + dy * dy); // hypotenuse
         return "M" +   // return a string of the format "M0,-5L10,0L0,5"
             d.source.x + "," + 
+// https://www.dashingd3js.com/svg-paths-and-d3js
 //          d.source.y + "A" + 
 //          dr + "," + dr + " 0 0,1 " + 
             d.source.y + "L" + 
