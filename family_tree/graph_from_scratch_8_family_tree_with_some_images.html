@@ -98,15 +98,24 @@ var node = svg.selectAll(".node")
 node.append("circle")
     .attr("r", 5);
 //*/
+  node.append(function(d) { if (isNumber(d.name)) {
+                                return "image";
+                                }else{
+                                return "circle";
+                                } });
 
-// http://bl.ocks.org/mbostock/950642
-  node.append("image")
-//      .attr("xlink:href", "https://github.com/favicon.ico")
+
+/*      
       .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
       .attr("x", -8) // off-set from center of node; picture corner is origin
       .attr("y", -8)
       .attr("width", 16)
       .attr("height", 16);
+                         } else {
+.append("circle")
+    .attr("r", 5);
+                         } });
+*/
 
 // add the text 
 node.append("text")
