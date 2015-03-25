@@ -95,8 +95,9 @@ var force = d3.layout.force()
       .attr("fill", function(d, i) { if (i>0) { return  palette.darkgray; } else { return palette.gray } } )
 
     //TEXT
-    node.append("text")
-      .text(function(d, i) { return d.img; })
+    node.append("image")
+//      .text(function(d, i) { return d.img; })
+      .attr(function(d, i) { return ["xlink:href", d.img]; })
     .attr("x",    function(d, i) { return circleWidth + 5; })
       .attr("y",            function(d, i) { if (i>0) { return circleWidth + 0 }    else { return 8 } })
        .attr("width", 25)
