@@ -73,14 +73,6 @@ var force = d3.layout.force()
       .enter().append("g")
       .attr("class", "node")
 
-      .append("image")
-//      .attr("xlink:href", "https://github.com/favicon.ico")
-      .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
-      .attr("x", -8) // off-set from center of node; picture corner is origin
-      .attr("y", -8)
-      .attr("width", 16)
-      .attr("height", 16)
-
       .call(force.drag);
 
 
@@ -101,6 +93,15 @@ var force = d3.layout.force()
       .attr("font-size",    function(d, i) {  return  "1em"; })
       .attr("text-anchor",  function(d, i) { if (i>0) { return  "beginning"; }      else { return "end" } })
 
+/*
+      .append("image")
+//      .attr("xlink:href", "https://github.com/favicon.ico")
+      .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
+      .attr("x", -8) // off-set from center of node; picture corner is origin
+      .attr("y", -8)
+      .attr("width", 16)
+      .attr("height", 16)
+//*/
 
 
 force.on("tick", function(e) {
