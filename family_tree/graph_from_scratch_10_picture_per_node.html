@@ -86,15 +86,15 @@ var force = d3.layout.force()
 
       .call(force.drag);
 
-
+/*
     //CIRCLE
     node.append("svg:circle")
       .attr("cx", function(d) { return d.x; })
       .attr("cy", function(d) { return d.y; })
       .attr("r", circleWidth)
       .attr("fill", function(d, i) { if (i>0) { return  palette.darkgray; } else { return palette.gray } } )
-
-    //TEXT
+*/
+    //image
     node.append("image")
 //      .text(function(d, i) { return d.img; })
       .attr(function(d, i) { return "xlink:href", d.img; })
