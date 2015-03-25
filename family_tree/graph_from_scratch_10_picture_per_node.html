@@ -116,12 +116,15 @@ console.log(node[0]);
 ///*
       node.append("image")
 //      .attr("xlink:href", "https://github.com/favicon.ico")
-      .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
+//      .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
+      .attr("xlink:href", function(d, i) { return d.img; })
       .attr("x", -8) // off-set from center of node; picture corner is origin
       .attr("y", -8)
       .attr("width", 16)
       .attr("height", 16)
 //*/
+
+      function(d, i) { return "xlink:href", d.img; }
 
 
 force.on("tick", function(e) {
