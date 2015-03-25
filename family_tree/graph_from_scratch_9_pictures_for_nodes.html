@@ -38,17 +38,6 @@ var nodes = [
                     {"name": "Davide" }
   ]
 
-  console.log(nodes[0])
-
-  nodes[0].append("image")
-//      .attr("xlink:href", "https://github.com/favicon.ico")
-      .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
-      .attr("x", -8) // off-set from center of node; picture corner is origin
-      .attr("y", -8)
-      .attr("width", 16)
-      .attr("height", 16);
-
-
 var links = [
                 {source: nodes[0], target: nodes[1]},
                   {source: nodes[1], target: nodes[2]},
@@ -83,6 +72,15 @@ var force = d3.layout.force()
       .data(nodes)
       .enter().append("g")
       .attr("class", "node")
+
+      .append("image")
+//      .attr("xlink:href", "https://github.com/favicon.ico")
+      .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
+      .attr("x", -8) // off-set from center of node; picture corner is origin
+      .attr("y", -8)
+      .attr("width", 16)
+      .attr("height", 16);
+
 
       //MOUSEOVER
       .on("mouseover", function(d,i) {
