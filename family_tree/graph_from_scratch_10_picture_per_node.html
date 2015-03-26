@@ -120,8 +120,8 @@ console.log(node[0]);
       .attr("xlink:href", function(d, i) { return d.img; } )
       .attr("x", -8) // off-set from center of node; picture corner is origin
       .attr("y", -8)
-      .attr("width", 200)
-//      .attr("height", 100)
+      .attr("width", 200) // without both width and height, image does not display
+      .attr("height", 100)
 //*/
 
 force.on("tick", function(e) {
