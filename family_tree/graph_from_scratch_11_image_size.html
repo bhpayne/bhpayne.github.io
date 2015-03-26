@@ -41,11 +41,11 @@ var nodes = [
 //*/
 
 var nodes = [
-                    {"img": "http://bhpayne.github.io/family_tree/images/1248277773.png" },
-                    {"img": "http://bhpayne.github.io/family_tree/images/8572657110.png"},
-                    {"img": "http://bhpayne.github.io/family_tree/images/9999999999.png"},
-                    {"img": "http://bhpayne.github.io/family_tree/images/solveForX.png"},
-                    {"img": "http://bhpayne.github.io/family_tree/images/subXforY.png" }
+                    {"img": "http://bhpayne.github.io/family_tree/images/1248277773.png", "width": 336 },
+                    {"img": "http://bhpayne.github.io/family_tree/images/8572657110.png", "width": 243},
+                    {"img": "http://bhpayne.github.io/family_tree/images/9999999999.png", "width": 575},
+                    {"img": "http://bhpayne.github.io/family_tree/images/solveForX.png" , "width": 137},
+                    {"img": "http://bhpayne.github.io/family_tree/images/subXforY.png"  , "width": 133}
   ]
   
 
@@ -125,6 +125,7 @@ var force = d3.layout.force()
       .attr("x", -8) // off-set from center of node; picture corner is origin
       .attr("y", -8)
       .attr("width", function(d, i) { return d.width; }) // without both width and height, image does not display
+//      .attr("width", 200) // without both width and height, image does not display
       .attr("height", 100)
 //*/
 
