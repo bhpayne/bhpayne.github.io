@@ -41,11 +41,11 @@ var nodes = [
 //*/
 
 var nodes = [
-                    {"img": "http://bhpayne.github.io/family_tree/images/1248277773.png", "width": 336 },
-                    {"img": "http://bhpayne.github.io/family_tree/images/8572657110.png", "width": 243},
-                    {"img": "http://bhpayne.github.io/family_tree/images/9999999999.png", "width": 575},
-                    {"img": "http://bhpayne.github.io/family_tree/images/solveForX.png" , "width": 137},
-                    {"img": "http://bhpayne.github.io/family_tree/images/subXforY.png"  , "width": 133}
+                    {"img": "http://bhpayne.github.io/family_tree/images/1248277773.png", "width": 336, "height": 42 },
+                    {"img": "http://bhpayne.github.io/family_tree/images/8572657110.png", "width": 243, "height": 77},
+                    {"img": "http://bhpayne.github.io/family_tree/images/9999999999.png", "width": 575, "height": 42},
+                    {"img": "http://bhpayne.github.io/family_tree/images/solveForX.png" , "width": 137, "height": 25},
+                    {"img": "http://bhpayne.github.io/family_tree/images/subXforY.png"  , "width": 133, "height": 25}
   ]
   
 
@@ -65,20 +65,6 @@ images/9999999999.png: PNG image data, 575 x 42, 8-bit/color RGB, non-interlaced
 images/solveForX.png:  PNG image data, 137 x 25, 8-bit/color RGB, non-interlaced
 images/subXforY.png:   PNG image data, 133 x 25, 8-bit/color RGB, non-int
 //*/
-var widths = [
-   {"width": 336},
-   {"width": 243},
-   {"width": 575},
-   {"width": 137},
-   {"width": 133},
-]
-var heights = [
-   {"height": 42},
-   {"height": 77},
-   {"height": 42},
-   {"height": 25},
-   {"height": 25},
-]
 
 var vis = d3.select("body")
     .append("svg:svg")
@@ -122,11 +108,11 @@ var force = d3.layout.force()
 //      .attr("xlink:href", "https://github.com/favicon.ico")
 //      .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
       .attr("xlink:href", function(d, i) { return d.img; } )
-      .attr("x", -8) // off-set from center of node; picture corner is origin
-      .attr("y", -8)
+      .attr("x", 0) // off-set from center of node; picture corner is origin
+      .attr("y", 0)
       .attr("width", function(d, i) { return d.width; }) // without both width and height, image does not display
 //      .attr("width", 200) // without both width and height, image does not display
-      .attr("height", 100)
+      .attr("height", function(d, i) { return d.height; })
 //*/
 
 force.on("tick", function(e) {
