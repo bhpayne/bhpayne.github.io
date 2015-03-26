@@ -41,12 +41,12 @@ var nodes = [
 //*/
 
 var nodes = [
-                    {"img": "http://bhpayne.github.io/family_tree/images/1248277773.png", "width": 336, "height": 42 },
-                    {"img": "http://bhpayne.github.io/family_tree/images/8572657110.png", "width": 243, "height": 77},
-                    {"img": "http://bhpayne.github.io/family_tree/images/9999999999.png", "width": 575, "height": 42},
-                    {"img": "http://bhpayne.github.io/family_tree/images/solveForX.png" , "width": 137, "height": 25},
-                    {"img": "http://bhpayne.github.io/family_tree/images/subXforY.png"  , "width": 133, "height": 25}
-  ]
+  {"img": "http://bhpayne.github.io/family_tree/images/1248277773.png", "width": 336, "height": 42 },
+  {"img": "http://bhpayne.github.io/family_tree/images/8572657110.png", "width": 243, "height": 77},
+  {"img": "http://bhpayne.github.io/family_tree/images/9999999999.png", "width": 575, "height": 42},
+  {"img": "http://bhpayne.github.io/family_tree/images/solveForX.png" , "width": 137, "height": 25},
+  {"img": "http://bhpayne.github.io/family_tree/images/subXforY.png"  , "width": 133, "height": 25}
+]
   
 
 var links = [
@@ -108,11 +108,11 @@ var force = d3.layout.force()
 //      .attr("xlink:href", "https://github.com/favicon.ico")
 //      .attr("xlink:href", "http://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif")
       .attr("xlink:href", function(d, i) { return d.img; } )
-      .attr("x", 0) // off-set from center of node; picture corner is origin
+      .attr("x", 0) // off-set from center of node; upper left corner of picture is origin
       .attr("y", 0)
-      .attr("width", function(d, i) { return d.width; }) // without both width and height, image does not display
+      .attr("width", function(d, i) { return d.width/2; }) // without both width and height, image does not display
 //      .attr("width", 200) // without both width and height, image does not display
-      .attr("height", function(d, i) { return d.height; })
+      .attr("height", function(d, i) { return d.height/2; })
 //*/
 
 force.on("tick", function(e) {
