@@ -35,9 +35,10 @@ var palette = {
 
 // load the external data
 d3.json("http://bhpayne.github.io/family_tree/nodes_list.json", function(error, root) {
-  nodes = root[0];
-  links = root[4];
+  console.log(root);
+  nodes = root["nodes"];
   console.log(nodes);
+  links = root["links"];
   console.log(links);
 
 /*
