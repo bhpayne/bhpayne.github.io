@@ -34,6 +34,10 @@ var palette = {
 // load the external data
 d3.json("http://bhpayne.github.io/family_tree/nodes_list.json", function(error, nodes) {
   console.log(nodes);
+
+d3.json("http://bhpayne.github.io/family_tree/links_list.json", function(error, links) {
+  console.log(nodes);
+
 //  update(root);
 //*/
 
@@ -46,7 +50,7 @@ var nodes = [
   {"img": "http://bhpayne.github.io/family_tree/images/subXforY.png"  , "width": 133, "height": 25, "label": "subXforY"}
 ]
 //*/
-
+/*
 var links = [
                   {source: nodes[0], target: nodes[1]},
                   {source: nodes[1], target: nodes[2]},
@@ -54,7 +58,8 @@ var links = [
                   {source: nodes[4], target: nodes[2]},
                   {source: nodes[2], target: nodes[3]}
 ]
-              
+//*/
+            
 /*
 file images/*
 images/1248277773.png: PNG image data, 336 x 42, 8-bit/color RGB, non-interlaced
@@ -137,6 +142,7 @@ force.on("tick", function(e) {
 force.start();
 
 
+});
 });
 
 
