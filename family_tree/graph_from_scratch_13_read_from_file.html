@@ -4,8 +4,8 @@
 <script src="../d3/d3.v3.min.js"></script>
 <script>
 
-var w = 1100,
-    h = 500;
+var w = 900,
+    h = 400;
 
 var circleWidth = 5;
 
@@ -30,13 +30,15 @@ var palette = {
       "yellowgreen": "#738A05"
   }
 
+///*
 // load the external data
-d3.json("nodes_list.json", function(error, nodeData) {
-  root = nodeData[0];
-  update(root);
+d3.json("http://bhpayne.github.io/family_tree/nodes_list.json", function(error, nodeData) {
+  nodes = nodeData[0];
+//  update(root);
 });
+//*/
 
-/*
+///*
 var nodes = [
   {"img": "http://bhpayne.github.io/family_tree/images/1248277773.png", "width": 336, "height": 42, "label": "1248277773" },
   {"img": "http://bhpayne.github.io/family_tree/images/8572657110.png", "width": 243, "height": 77, "label": "8572657110"},
@@ -53,33 +55,41 @@ var links = [
                   {source: nodes[4], target: nodes[2]},
                   {source: nodes[2], target: nodes[3]}
 ]
+              
+/*
+file images/*
+images/1248277773.png: PNG image data, 336 x 42, 8-bit/color RGB, non-interlaced
+images/8572657110.png: PNG image data, 243 x 77, 8-bit/color RGB, non-interlaced
+images/9999999999.png: PNG image data, 575 x 42, 8-bit/color RGB, non-interlaced
+images/solveForX.png:  PNG image data, 137 x 25, 8-bit/color RGB, non-interlaced
+images/subXforY.png:   PNG image data, 133 x 25, 8-bit/color RGB, non-int
+//*/
 
-  var vis = d3.select("body")
-      .append("svg:svg")
+var vis = d3.select("body")
+    .append("svg:svg")
       .attr("class", "stage")
       .attr("width", w)
       .attr("height", h);
 
-function update(source) {
-
-  var force = d3.layout.force()
+var force = d3.layout.force()
     .nodes(nodes)
     .links([])
     .gravity(0.1)
     .charge(-1000)
     .size([w, h]);
 
-  var link = vis.selectAll(".link")
+ var link = vis.selectAll(".link")
         .data(links)
         .enter().append("line")
           .attr("class", "link")
           .attr("stroke", "#CCC")
           .attr("fill", "none");
 
-  var node = vis.selectAll("circle.node")
+ var node = vis.selectAll("circle.node")
       .data(nodes)
       .enter().append("g")
       .attr("class", "node")
+
       .call(force.drag);
 
 ///*
@@ -113,9 +123,8 @@ function update(source) {
 //      .attr("width", 200) // without both width and height, image does not display
       .attr("height", function(d, i) { return d.height/2; })
 //*/
-}
 
-  force.on("tick", function(e) {
+force.on("tick", function(e) {
   node.attr("transform", function(d, i) {     
         return "translate(" + d.x + "," + d.y + ")"; 
     });
@@ -127,6 +136,7 @@ function update(source) {
 });
 
 force.start();
+
 
 </script>
 <P>Hello</P>
