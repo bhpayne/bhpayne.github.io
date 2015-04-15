@@ -53,7 +53,7 @@ var force = d3.layout.force()
     .size([width, height])
 //    .gravity(.5) // gravity is implemented as a weak geometric constraint similar to a virtual spring connecting each node to the center of the layout's size.
     .linkDistance(60) // sets the target distance between linked nodes to the specified value
-    .charge(-300) // A negative value results in node repulsion
+    .charge(-400) // A negative value results in node repulsion
     .on("tick", tick)
     .start();
 
