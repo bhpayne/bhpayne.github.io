@@ -1,2 +1,3 @@
-# bhpayne.github.io
-my website
+# Ben Payne
+
+See <https://bhpayne.github.io/>
